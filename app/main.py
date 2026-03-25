@@ -1,3 +1,5 @@
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import auth, tasks, documents, search, analytics
@@ -27,6 +29,10 @@ app.include_router(documents.router, prefix="/documents", tags=["Documents"])
 app.include_router(search.router,    prefix="/search",    tags=["Search"])
 app.include_router(analytics.router, prefix="/analytics", tags=["Analytics"])
 
+
+@app.get("/ui")
+def frontend():
+    return FileResponse("index.html")
 @app.get("/")
 def root():
     return {"message": "AI Task & Knowledge Management System is running!"}
