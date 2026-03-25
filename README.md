@@ -48,7 +48,7 @@ ai-task-system/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Vilas317/ai-task-system.git
+**git clone https://github.com/Vilas317/ai-task-system.git
 cd ai-task-system
 🧪 Backend Setup
 2. Create virtual environment
@@ -97,4 +97,4 @@ PATCH	/tasks/{id}	Update task
 POST	/documents/upload	Upload document
 GET	/documents	List documents
 POST	/search	Semantic search
-GET	/analytics	Dashboard
+GET	/analytics	Dashboard**
